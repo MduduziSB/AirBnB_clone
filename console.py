@@ -148,6 +148,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         """quits the interpreter"""
+        print("")
         return True
 
     def help_quit(self):
@@ -155,6 +156,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, line):
         """Returns true on successful execution"""
+        print("")
         return True
 
 
