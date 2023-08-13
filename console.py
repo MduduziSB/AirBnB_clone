@@ -40,8 +40,9 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
             return False
 
-        new_instance = HBNBCommand.classes["BaseModel"]()
+        new_instance = HBNBCommand.classes[class_name]()
         print(new_instance.id)
+        new_instance.save()
 
     def do_show(self, line):
         """Prints the string representation of an instance"""
