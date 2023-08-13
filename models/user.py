@@ -3,6 +3,7 @@
 """Defines a child class that inherits from BaseModel"""
 
 from models.base_model import BaseModel
+import json
 
 
 class User(BaseModel):
