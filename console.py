@@ -2,7 +2,6 @@
 """Contains the entry point of the HBNB command interpreter"""
 
 import cmd
-import sys
 import shlex
 from models.base_model import BaseModel
 from models import storage
