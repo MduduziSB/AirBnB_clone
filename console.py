@@ -157,6 +157,7 @@ class HBNBCommand(cmd.Cmd):
         """Returns true on successful execution"""
         return True
 
+
 if __name__ == '__main__':
     if not sys.stdin.isatty():
         HBNBCommand().cmdloop()
