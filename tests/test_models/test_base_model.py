@@ -20,11 +20,11 @@ class TestBaseModel(unittest.TestCase):
         self.model2 = BaseModel(args_test)
         self.model2.save()
 
-    def class_doc_test(self):
+    def test_class_doc(self):
         """class documentation test"""
         self.assertIsNotNone(BaseModel.__doc__)
 
-    def method_doc_test(self):
+    def test_method_doc(self):
         """ BaseModel's method documentation test"""
         methods = [
             BaseModel.__init__, BaseModel.__str__,
@@ -33,12 +33,12 @@ class TestBaseModel(unittest.TestCase):
         for meth in methods:
             self.assertIsNotNone(meth.__doc__)
 
-    def initial_attribute_test(self):
+    def test_initial_attribute(self):
         """id attribute  Test"""
         model = BaseModel()
         model2 = BaseModel()
 
-        self.assertTrue(hasattr(test_model, 'id'))
+        self.assertTrue(hasattr(model, 'id'))
         self.assertIsNotNone(model.id)
         self.assertIsInstance(model.id, str)
 
@@ -58,7 +58,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertNotIn("args", test_with_arg.__dict__)
 
         str_ = "[BaseModel] ({}) {}".format(model.id, model.__dict__)
-        self.assertEqual(str(test_model), str_)
+        self.assertEqual(str(model), str_)
 
     def test_kwargs_input(self):
         """BaseModel construction with kwargs test"""
