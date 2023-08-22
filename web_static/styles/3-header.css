@@ -1,0 +1,21 @@
+header {
+  color: white;
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  background-color: #484848;
+}
+
+header .logo {
+  display: inline-block;
+  background: url("../images/logo.png") no-repeat;
+  width: 40px; /* Adjust as needed */
+  height: 40px; /* Adjust as needed */
+  background-size: contain;
+  margin-right: 20px;
+}
+
